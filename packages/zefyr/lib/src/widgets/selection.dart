@@ -108,13 +108,25 @@ class ZefyrSelectionOverlayState extends State<ZefyrSelectionOverlay>
         selection: value.selection);
   }
 
+
+  @override
+  void userUpdateTextEditingValue(TextEditingValue value, SelectionChangedCause cause) {
+    final cursorPosition = value.selection.extentOffset;
+    final oldText = _scope.controller.document.toPlainText();
+    final newText = value.text;
+    final diff = fastDiff(oldText, newText, cursorPosition);
+    _scope.controller.replaceText(
+        diff.start, diff.deleted.length, diff.inserted,
+        selection: value.selection);
+  }
+
   @override
   void bringIntoView(ui.TextPosition position) {
     // TODO: implement bringIntoView
   }
 
   @override
-  void hideToolbar() {
+  void hideToolbar([bool hideHandles = true]) {
     _didCaretTap = false; // reset double tap.
     _toolbar?.remove();
     _toolbar = null;

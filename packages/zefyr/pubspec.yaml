@@ -3,6 +3,7 @@ description: Clean, minimalistic and collaboration-ready rich text editor for Fl
 version: 0.12.0
 author: Anatoly Pulyaevskiy <anatoly.pulyaevskiy@gmail.com>
 homepage: https://github.com/memspace/zefyr
+publish_to: none
 
 environment:
   sdk: '>=2.2.2 <3.0.0'

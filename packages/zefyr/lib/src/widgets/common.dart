@@ -68,7 +68,7 @@ class _ZefyrLineState extends State<ZefyrLine> {
         case TargetPlatform.fuchsia:
         case TargetPlatform.windows:
         case TargetPlatform.linux:
-          cursorColor = theme.cursorColor;
+          cursorColor = theme.textSelectionTheme.cursorColor;
           break;
       }
 
@@ -79,7 +79,7 @@ class _ZefyrLineState extends State<ZefyrLine> {
         renderContext: scope.renderContext,
         showCursor: scope.showCursor,
         selection: scope.selection,
-        selectionColor: theme.textSelectionColor,
+        selectionColor: theme.textSelectionTheme.selectionColor,
         cursorColor: cursorColor,
       );
       content = CompositedTransformTarget(link: _link, child: content);

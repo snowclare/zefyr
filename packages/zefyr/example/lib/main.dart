@@ -69,19 +69,19 @@ class HomePage extends StatelessWidget {
       body: Column(
         children: <Widget>[
           Expanded(child: Container()),
-          RaisedButton(
+          ElevatedButton(
             onPressed: () => nav.pushNamed('/fullPage'),
             child: Text('Full page editor'),
           ),
-          RaisedButton(
+          ElevatedButton(
             onPressed: () => nav.pushNamed('/form'),
             child: Text('Embedded in a form'),
           ),
-          RaisedButton(
+          ElevatedButton(
             onPressed: () => nav.pushNamed('/view'),
             child: Text('Read-only embeddable view'),
           ),
-          RaisedButton(
+          ElevatedButton(
             onPressed: () => nav.pushNamed('/textinput'),
             child: Text('basic text input'),
           ),

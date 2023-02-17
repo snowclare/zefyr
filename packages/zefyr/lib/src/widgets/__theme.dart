@@ -85,8 +85,8 @@ class ZefyrThemeData {
       paragraphTheme: StyleTheme(textStyle: paragraphStyle, padding: padding),
       headingTheme: HeadingTheme.fallback(context),
       blockTheme: BlockTheme.fallback(context),
-      selectionColor: themeData.textSelectionColor,
-      cursorColor: themeData.cursorColor,
+      selectionColor: themeData.textSelectionTheme.selectionColor,
+      cursorColor: themeData.textSelectionTheme.cursorColor,
       indentSize: 16.0,
       toolbarTheme: ZefyrToolbarTheme.fallback(context),
     );

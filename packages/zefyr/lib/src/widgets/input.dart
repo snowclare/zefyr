@@ -201,4 +201,29 @@ class InputConnectionController implements TextInputClient {
   void performPrivateCommand(String action, Map<String, dynamic> data) {
     // TODO: implement performPrivateCommand
   }
+  
+  @override
+  void didChangeInputControl(TextInputControl oldControl, TextInputControl newControl) {
+    // TODO: implement didChangeInputControl
+  }
+  
+  @override
+  void insertTextPlaceholder(Size size) {
+    // TODO: implement insertTextPlaceholder
+  }
+  
+  @override
+  void performSelector(String selectorName) {
+    // TODO: implement performSelector
+  }
+  
+  @override
+  void removeTextPlaceholder() {
+    // TODO: implement removeTextPlaceholder
+  }
+  
+  @override
+  void showToolbar() {
+    // TODO: implement showToolbar
+  }
 }
